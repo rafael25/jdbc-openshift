@@ -34,7 +34,7 @@ public class Pribar extends HttpServlet {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM `prueba`");
             out.println(resultSet);
         } catch (Exception e) {
-            out.println(e.getStackTrace());
+            out.println(e.getMessage());
         }
     }
 }
