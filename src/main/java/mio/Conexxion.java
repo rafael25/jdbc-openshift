@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 public class Conexxion {
     public static Connection conexxion() throws ClassNotFoundException, SQLException {
-        String url = "jdbc:mysql://127.7.73.2:3306/prueba";
+        String url = "jdbc:mysql://127.7.73.2:3306/tomee";
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, "adminrhZH5AX", "t5VWhNdKZlMb");
         return con;

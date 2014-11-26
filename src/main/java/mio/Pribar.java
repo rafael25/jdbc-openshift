@@ -31,7 +31,7 @@ public class Pribar extends HttpServlet {
             Connection con = Conexxion.conexxion();
             
             Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM `prueba`");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM prueba");
             out.println(resultSet);
         } catch (Exception e) {
             out.println(e.getMessage());
