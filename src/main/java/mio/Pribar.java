@@ -34,11 +34,15 @@ public class Pribar extends HttpServlet {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM prueba");
             out.println(resultSet);
             
+            out.println("<table>");
             while(resultSet.next()) {
-                out.println(resultSet.getString("id"));
-                out.println(resultSet.getString("nombre"));
-                out.println(resultSet.getString("edad"));
+                out.println("<tr>");
+                out.println("<td>"+resultSet.getString("id")+"</td>");
+                out.println("<td>"+resultSet.getString("nombre")+"</td>");
+                out.println("<td>"+resultSet.getString("edad")+"</td>");
+                out.println("</tr>");
             }
+            out.println("</table>");
             
         } catch (Exception e) {
             out.println("Exception: "+e.getMessage());
